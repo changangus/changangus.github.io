@@ -197,6 +197,7 @@ nav {
 @media (max-width: 600px){
   .nav-links{
     flex-direction: column;
+    margin-top: 20px;
   }
 }
 
@@ -275,6 +276,9 @@ nav {
 }
 
 @media (max-width: 600px){
+  .skills-header{
+    padding: 4rem 0;
+  }
   .skills-item{
     font-size: 30px;
     margin: 5px 5px;
