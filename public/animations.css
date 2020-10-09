@@ -1,0 +1,19 @@
+.skills,
+.about-me,
+.projects,
+.contact {
+  opacity: 0;
+  transform: translateY(100px)
+}
+
+[data-scroll] {
+  transition: 1s opacity 0.2s ease, 1s transform 0.2s ease, background-position 0.15s ease-in, color 0.15s ease-in;
+}
+
+.skills[data-scroll="in"],
+.about-me[data-scroll="in"],
+.projects[data-scroll="in"],
+.contact[data-scroll="in"]{
+    opacity: 1;
+    transform: translateY(0);
+}
