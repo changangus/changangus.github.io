@@ -184,7 +184,7 @@ nav {
   letter-spacing: normal;
   font-family: var(--ff-primary);
   position: relative;
-  transition: all 0.5s;
+  transition: all 0.5s ease;
   text-decoration: none;
   color: var(--clr-accent);
 }
@@ -192,6 +192,7 @@ nav {
 .nav-link:hover{
   cursor: pointer;
   color: var(--clr-light);
+  border-bottom: 8px solid var(--clr-light)
 }
 
 @media (max-width: 600px){
@@ -213,7 +214,7 @@ nav {
 .about-me{
   color: var(--clr-light);
   font-family: var(--ff-primary);
-  padding: 4rem 20rem;
+  padding: 4rem 10rem;
 }
 
 .description {
@@ -227,6 +228,14 @@ nav {
   width: 500px;
   margin-bottom: 50px;
   border-radius: 10px;
+}
+
+@media(max-width: 1200px){
+  .description {
+    font-size: 1.25em;
+    width: 100%;
+    text-indent: 3em;
+  }
 }
 
 @media (max-width: 800px) {
@@ -254,7 +263,8 @@ nav {
 
 .skills-header{
   font-size: var(--fs-h3);
-  padding: 4rem 20rem
+  padding: 4rem 20rem;
+  display: block
 }
 .skills {
   margin-top: 40px;
@@ -266,7 +276,7 @@ nav {
 
 .skills-grid {
   display: flex;
-
+  padding: 0 10em;
 }
 
 .skills-item {
