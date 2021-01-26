@@ -261,6 +261,7 @@ nav {
     text-indent: 2em;
     width: 23em;
     font-size: 14px;
+    padding: 1rem;
   }
 }
 
@@ -294,7 +295,11 @@ nav {
 
 @media (max-width: 600px){
   .skills-header{
-    padding: 4rem 0;
+    padding: 4rem 2rem;
+    width: 100vw;
+  }
+  .skills-grid{
+    width: 100vw
   }
   .skills-item{
     font-size: 30px;
