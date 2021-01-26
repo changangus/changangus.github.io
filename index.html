@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" property="og:title" content="Portfolio" />
+  <meta property="og:type" content="_" />
+  <meta name="image" property="og:image" content="https://live.staticflickr.com/65535/50878410501_64d25307eb_b.jpg" />
+  <meta name="description" property="og:description" content="My portfolio" />
+  <meta name="author" content="Angus Chang" />
   <link rel="icon" type="img/png" href="./public/images/favicon.ico">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -46,19 +51,25 @@
   <section class="about-me" id="about">
     <h1 class="sub-header">About Me</h1>
     <img class="picture" src="./public/images/Headshot.png" alt="picture of Angus">
-    <p class="description">My name is Angus Chang, I have been teaching myself web development and found web development to be an engaging way to create and bring to life my own ideas. I especially enjoy working with UI effects and animations to develop an interface I can call my own. My main goal is to to continue my education and enter the workforce with the necessary tools and perspectives to make a meaningful impact in the industry.</p>
+    <p class="description">My name is Angus Chang, I have been teaching myself web development and found web development to be an engaging way to create and bring to life my own ideas. I especially enjoy working with UI effects and animations to develop an interface I can call my own. My main goal is to to continue my education and enter the workforce with the necessary tools and perspectives to make a meaningful impact in the industry. Below you can find some projects I have completed. I am always working on new projects so feel free to reach out if you are curious what I am currently working on.</p>
 
     <!-- Skills Section -->
     <div class="skills">
       <h5 class="sub-header skills-header">Skills:</h5>
       <ul class="skills-grid">
+        <li class="skills-item"><i class="devicon-javascript-plain colored"></i></li>
+        <li class="skills-item"><i class="devicon-typescript-plain colored"></i></li>
+        <li class="skills-item"><i class="devicon-react-original-wordmark colored"></i></li>
+        <li class="skills-item"><i class="devicon-redux-original colored"></i></li>
+        <li class="skills-item"><i class="devicon-nodejs-plain colored"></i></li>
+        <li class="skills-item"><i class="devicon-express-original"></i></li>
+      </ul>
+      <ul class='skills-grid'>
         <li class="skills-item"><i class="devicon-html5-plain-wordmark colored"></i></li>
         <li class="skills-item"><i class="devicon-css3-plain-wordmark colored"></i></li>
-        <li class="skills-item"><i class="devicon-javascript-plain colored"></i></li>
-        <li class="skills-item"><i class="devicon-react-original-wordmark colored"></i></li>
-        <li class="skills-item"><i class="devicon-nodejs-plain colored"></i></li>
+        <li class="skills-item"><i class="devicon-sass-original colored"></i></li>
         <li class="skills-item"><i class="devicon-mongodb-plain-wordmark colored"></i></li>
-        <li class="skills-item"><i class="devicon-express-original"></i></li>
+        <li class="skills-item"><i class="devicon-firebase-plain-wordmark colored"></i></li>
         <li class="skills-item"><i class="devicon-git-plain colored"></i></li>
       </ul>
     </div>
@@ -73,18 +84,36 @@
   <div class="projects" id="projects">
     <h2 class="sub-header project-header">Projects</h2>
     <div class="cards-list">
-  
-      <a href="https://changangus.github.io/community_fridge_finder/#/" target="_blank">
-        <div class="card 1">
-          <div class="card_image"> 
-            <img src="./public/gifs/communityfridgefinder.gif"/></div>
-          <div class="card_title title-black">
-            <p>Community Fridge Finder</p>
+      <div>
+        <a href="https://changangus.github.io/community_fridge_finder/#/" target="_blank" class='card-link'>
+          <div class="card 1">
+            <div class="card_image"> 
+              <img src="./public/gifs/communityfridgefinder.gif"/></div>
+            <div class="card_title title-black">
+              <p>Community Fridge Finder</p>
+            </div>
+            <div class="overlay">
+              <div class="card-overlay-description">
+                <h1>Description:</h1>
+                <p>Community Fridge Finder is an app designed to help people understand what community fridges are and where to find them in their own community. Users can upload fridges that they know are running or search for them near their own homes.</p>
+              </div>
+              <div>
+                <h2>Tech:</h2>
+                <ul>
+                  <li>- React</li>
+                  <li>- React Router</li>
+                  <li>- Framer Motion</li>
+                  <li>- Google Maps Places API</li>
+                  <li>- EmailJS</li>
+                </ul>
+              </div> 
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
+
       
-      <a href="https://agile-cove-24845.herokuapp.com/" target="_blank">
+      <a href="https://agile-cove-24845.herokuapp.com/" target="_blank" class='card-link'>
         <div class="card 2">
           <div class="card_image">
             <img src="./public/gifs/yelp camp.gif" />
@@ -92,10 +121,27 @@
           <div class="card_title title-white">
             <p>Yelp Camp</p>
           </div>
+          <div class="overlay">
+            <div class="card-overlay-description">
+              <h1>Description:</h1>
+              <p>Yelp Camp is the capstone project for Colt Steele's web development Udemy course. This is a CRUD application for campsites where users can add, comment on or search for and map to campsites in the database.</p>
+            </div>
+            <div>
+              <h2>Tech:</h2>
+              <ul>
+                <li>- MongoDB</li>
+                <li>- Express</li>
+                <li>- Node</li>
+                <li>- Google Maps API</li>
+                <li>- passportJS</li>
+                <li>- Bootstrap</li>
+              </ul>
+            </div> 
+          </div>
         </div>
       </a>
 
-      <a href="https://codepen.io/changangus/pen/RwajaOL" target="_blank">
+      <a href="https://codepen.io/changangus/pen/RwajaOL" target="_blank" class='card-link'>
         <div class="card 3">
           <div class="card_image">
             <img src="./public/gifs/infinity scroll.gif" />
@@ -106,13 +152,28 @@
         </div>
       </a>
 
-      <a href="https://changangus.github.io/color-app/#/" target="_blank">
+      <a href="https://changangus.github.io/color-app/#/" target="_blank" class='card-link'>
         <div class="card 4">
           <div class="card_image">
             <img src="./public/gifs/color-app.gif" />
             </div>
           <div class="card_title title-black">
             <p>Color Collector</p>
+          </div>
+          <div class="overlay">
+            <div class="card-overlay-description">
+              <h1>Description:</h1>
+              <p>A clone of FlatUI's color palette app. You can create your own color palettes for projects and save them to your browsers local storage. It even lets you pick your very own emoji to go along with a palette name of your choice... WOW!</p>
+            </div>
+            <div>
+              <h2>Tech:</h2>
+              <ul>
+                <li>- React</li>
+                <li>- React Router</li>
+                <li>- React Hooks</li>
+                <li>- MaterialUI</li>
+              </ul>
+            </div> 
           </div>
         </div>
       </a>

@@ -3,15 +3,21 @@
 .cards-list {
   z-index: 0;
   width: 100%;
+  height: 85%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
+.card-link {
+  width: 500px;
+  height: 600px;
+}
+
 .card {
   margin: 30px auto;
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
   border-radius: 40px;
   box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
   cursor: pointer;
@@ -39,6 +45,26 @@
   font-size: 30px;
   margin-top: -80px;
   height: 40px;
+}
+
+.overlay {
+
+  position: relative;
+  top: -460px;
+  width: 500px;
+  height: 500px;
+  border-radius: 40px;
+  opacity: 0;
+  transition: 0.3s ease;
+  padding: 20px;
+}
+
+.card-overlay-description {
+  margin-bottom: 20px;
+}
+
+.overlay:hover {
+  opacity: 0.85
 }
 
 .card:hover {
