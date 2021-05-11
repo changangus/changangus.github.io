@@ -19,12 +19,12 @@
 
 .card-link {
   text-decoration: underline;
-  color: aqua;
-  font-size: 30px;
+  color:aqua;
+  font-size: 25px;
 }
 
 .link-container {
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 
 .card .card_image {
