@@ -100,12 +100,17 @@
     width: 300px;
     height: 300px;
   }
+  .card-link {
+    font-size: 18px;
+  }
   .overlay {
     position: relative;
     top: -260px;
     width: 300px;
     height: 300px;
     font-size: 13px;
+    opacity: 0.85;
+    overflow: auto
   }
 }
 
