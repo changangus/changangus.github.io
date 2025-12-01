@@ -1,10 +1,12 @@
 import { style } from '@vanilla-extract/css';
+import { vars } from './theme.css'; // Import the theme variables
 
 export const container = style({
-  fontFamily: 'sans-serif',
+  fontFamily: vars.fonts.body,
   textAlign: 'center',
-  padding: '20px',
-  backgroundColor: '#f0f2f5',
+  padding: vars.space.medium,
+  backgroundColor: vars.colors.background, // Use theme background color
+  color: vars.colors.text, // Use theme text color
   minHeight: '100vh',
   display: 'flex',
   flexDirection: 'column',
@@ -14,15 +16,15 @@ export const container = style({
 
 export const nav = style({
   listStyle: 'none',
-  padding: 0,
+  padding: vars.space.none,
   display: 'flex',
-  gap: '20px',
-  marginBottom: '40px',
+  gap: vars.space.medium, // Use theme space medium
+  marginBottom: vars.space.large,
 });
 
 export const navLink = style({
   textDecoration: 'none',
-  color: '#007bff',
+  color: vars.colors.primary, // Use theme primary color
   fontSize: '1.2em',
   selectors: {
     '&:hover': {
@@ -32,21 +34,23 @@ export const navLink = style({
 });
 
 export const pageContent = style({
-  backgroundColor: '#ffffff',
-  padding: '40px',
+  backgroundColor: vars.colors.surface, // Use theme surface color
+  padding: vars.space.large,
   borderRadius: '8px',
-  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Keep static shadow for now
   maxWidth: '600px',
   width: '100%',
 });
 
 export const heading = style({
-  color: '#333',
+  color: vars.colors.text, // Use theme text color
   fontSize: '2em',
-  marginBottom: '20px',
+  marginBottom: vars.space.medium,
+  fontFamily: vars.fonts.heading,
 });
 
 export const paragraph = style({
-  color: '#555',
+  color: vars.colors.text, // Use theme text color
   lineHeight: '1.6',
+  fontFamily: vars.fonts.body,
 });
