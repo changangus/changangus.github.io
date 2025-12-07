@@ -1,6 +1,8 @@
 import { style } from '@vanilla-extract/css';
 import { vars } from './theme.css'; // Import the theme variables
 
+const themeTransition = 'background-color 0.6s cubic-bezier(0.16, 1, 0.3, 1), color 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+
 export const container = style({
   fontFamily: vars.fonts.body,
   textAlign: 'center',
@@ -12,6 +14,7 @@ export const container = style({
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
+  transition: themeTransition,
 });
 
 export const nav = style({
@@ -26,6 +29,7 @@ export const navLink = style({
   textDecoration: 'none',
   color: vars.colors.primary, // Use theme primary color
   fontSize: '1.2em',
+  transition: themeTransition,
   selectors: {
     '&:hover': {
       textDecoration: 'underline',
@@ -40,6 +44,7 @@ export const pageContent = style({
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Keep static shadow for now
   maxWidth: '600px',
   width: '100%',
+  transition: themeTransition,
 });
 
 export const heading = style({
@@ -47,10 +52,12 @@ export const heading = style({
   fontSize: '2em',
   marginBottom: vars.space.medium,
   fontFamily: vars.fonts.heading,
+  transition: themeTransition,
 });
 
 export const paragraph = style({
   color: vars.colors.text, // Use theme text color
   lineHeight: '1.6',
   fontFamily: vars.fonts.body,
+  transition: themeTransition,
 });

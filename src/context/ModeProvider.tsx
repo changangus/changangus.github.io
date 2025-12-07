@@ -1,15 +1,37 @@
-import React, { useState, ReactNode } from 'react';
+import React, { useState, useEffect, type ReactNode } from 'react';
 import { ModeContext } from './ModeContext';
 
 export const ModeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [isCreativeMode, setIsCreativeMode] = useState(false); // Default to Logic Mode
+  const [isReducedMotion, setIsReducedMotion] = useState(() => {
+    // Check system preference on initial load
+    if (typeof window !== 'undefined') {
+      return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsReducedMotion(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
 
   const toggleMode = () => {
     setIsCreativeMode(prevMode => !prevMode);
   };
 
+  const toggleReducedMotion = () => {
+    setIsReducedMotion(prev => !prev);
+  };
+
   return (
-    <ModeContext.Provider value={{ isCreativeMode, toggleMode }}>
+    <ModeContext.Provider value={{ isCreativeMode, toggleMode, isReducedMotion, toggleReducedMotion }}>
       {children}
     </ModeContext.Provider>
   );

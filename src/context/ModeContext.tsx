@@ -3,6 +3,8 @@ import { createContext, useContext } from 'react';
 interface ModeContextType {
   isCreativeMode: boolean;
   toggleMode: () => void;
+  isReducedMotion: boolean;
+  toggleReducedMotion: () => void;
 }
 
 export const ModeContext = createContext<ModeContextType | undefined>(undefined);
