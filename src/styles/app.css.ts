@@ -1,7 +1,7 @@
 import { style } from '@vanilla-extract/css';
 import { vars } from './theme.css'; // Import the theme variables
 
-const themeTransition = 'background-color 0.6s cubic-bezier(0.16, 1, 0.3, 1), color 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+export const themeTransition = 'background-color 0.6s cubic-bezier(0.16, 1, 0.3, 1), color 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
 
 export const container = style({
   fontFamily: vars.fonts.body,

@@ -1,5 +1,6 @@
 import { style, keyframes } from "@vanilla-extract/css";
 import { vars } from "../../styles/theme.css";
+import { themeTransition } from "../../styles/app.css";
 
 const blink = keyframes({
   "0%": { opacity: 1 },
@@ -18,7 +19,17 @@ export const heroContainer = style({
   border: `2px solid ${vars.colors.text}`,
   padding: vars.space.large,
   backgroundColor: vars.colors.surface,
-  boxShadow: "20px 20px 0px 0px rgba(0,0,0,0.2)", // Hard shadow for brutalist feel
+  boxShadow: "20px 20px 0px 0px rgba(0,0,0,0.2)",
+  transition: themeTransition,
+});
+
+export const sectionContainer = style({
+  backgroundColor: vars.colors.surface,
+  padding: vars.space.large,
+  borderRadius: "8px",
+  maxWidth: "800px",
+  width: "100%",
+  transition: themeTransition,
 });
 
 export const name = style({

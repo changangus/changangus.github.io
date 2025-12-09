@@ -1,20 +1,17 @@
-import { Routes, Route, Link, useLocation } from "react-router-dom";
-import { AnimatePresence, useAnimate } from "framer-motion";
+import { Link } from "react-router-dom";
+import { useAnimate } from "framer-motion";
 import Home from "./pages/Home";
-import About from "./pages/About";
 import { useMode } from "./context/ModeContext";
 import { lightTheme } from "./styles/lightTheme.css";
 import { darkTheme } from "./styles/darkTheme.css";
-import { container, nav, navLink, pageContent } from "./styles/app.css";
+import { container, nav, navLink } from "./styles/app.css";
 import ThemeToggleButton from "./components/ThemeToggleButton/ThemeToggleButton";
 import LenisWrapper from "./components/Lenis/LenisWrapper";
 import SEO from "./components/SEO/SEO";
 import WebGLExperience from "./components/WebGL/WebGLExperience";
-import PageTransition from "./components/PageTransition/PageTransition";
 
 function App() {
   const { isLightMode, toggleLightMode, isReducedMotion } = useMode();
-  const location = useLocation();
   const [scope, animate] = useAnimate();
 
   const handleToggle = async () => {
