@@ -1,8 +1,8 @@
 import { createContext, useContext } from 'react';
 
 interface ModeContextType {
-  isCreativeMode: boolean;
-  toggleMode: () => void;
+  isLightMode: boolean;
+  toggleLightMode: () => void;
   isReducedMotion: boolean;
   toggleReducedMotion: () => void;
 }

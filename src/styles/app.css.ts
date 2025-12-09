@@ -41,8 +41,7 @@ export const pageContent = style({
   backgroundColor: vars.colors.surface, // Use theme surface color
   padding: vars.space.large,
   borderRadius: '8px',
-  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Keep static shadow for now
-  maxWidth: '600px',
+  maxWidth: '800px',
   width: '100%',
   transition: themeTransition,
 });

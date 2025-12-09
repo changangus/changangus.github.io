@@ -2,7 +2,7 @@ import React, { useState, useEffect, type ReactNode } from 'react';
 import { ModeContext } from './ModeContext';
 
 export const ModeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [isCreativeMode, setIsCreativeMode] = useState(false); // Default to Logic Mode
+  const [isLightMode, setIsLightMode] = useState(false); // Default to Dark Mode
   const [isReducedMotion, setIsReducedMotion] = useState(() => {
     // Check system preference on initial load
     if (typeof window !== 'undefined') {
@@ -22,8 +22,8 @@ export const ModeProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
-  const toggleMode = () => {
-    setIsCreativeMode(prevMode => !prevMode);
+  const toggleLightMode = () => {
+    setIsLightMode(prevMode => !prevMode);
   };
 
   const toggleReducedMotion = () => {
@@ -31,7 +31,7 @@ export const ModeProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   return (
-    <ModeContext.Provider value={{ isCreativeMode, toggleMode, isReducedMotion, toggleReducedMotion }}>
+    <ModeContext.Provider value={{ isLightMode, toggleLightMode, isReducedMotion, toggleReducedMotion }}>
       {children}
     </ModeContext.Provider>
   );

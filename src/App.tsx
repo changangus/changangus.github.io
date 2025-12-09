@@ -3,8 +3,8 @@ import { AnimatePresence, useAnimate } from 'framer-motion';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import { useMode } from "./context/ModeContext";
-import { logicTheme } from "./styles/logicTheme.css";
-import { creativeTheme } from "./styles/creativeTheme.css";
+import { lightTheme } from "./styles/lightTheme.css";
+import { darkTheme } from "./styles/darkTheme.css";
 import { container, nav, navLink, pageContent } from "./styles/app.css";
 import Button from "./components/Button/Button";
 import SEO from "./components/SEO/SEO";
@@ -13,13 +13,13 @@ import PageTransition from "./components/PageTransition/PageTransition";
 import LenisWrapper from "./components/Lenis/LenisWrapper";
 
 function App() {
-  const { isCreativeMode, toggleMode, isReducedMotion, toggleReducedMotion } = useMode();
+  const { isLightMode, toggleLightMode, isReducedMotion, toggleReducedMotion } = useMode();
   const location = useLocation();
   const [scope, animate] = useAnimate();
 
   const handleToggle = async () => {
     if (isReducedMotion) {
-      toggleMode();
+      toggleLightMode();
       return;
     }
 
@@ -27,7 +27,7 @@ function App() {
     await animate(scope.current, { rotateY: 90, opacity: 0.5, scale: 0.95 }, { duration: 0.3, ease: "easeIn" });
     
     // 2. Perform the actual theme switch state update
-    toggleMode();
+    toggleLightMode();
     
     // 3. Rotate back from 90 to 0 (reveal new side) - looks like the new page is turning in
     await animate(scope.current, { rotateY: 0, opacity: 1, scale: 1 }, { duration: 0.3, ease: "easeOut" });
@@ -38,10 +38,10 @@ function App() {
       <SEO title="Angus Chang" description="A software engineering portfolio showcasing interactive web experiences." />
       
       {/* Perspective Wrapper for 3D effect */}
-      <div style={{ perspective: '1500px', overflow: 'hidden', backgroundColor: isCreativeMode ? '#fcfbf7' : '#0a0a0a' }}>
+      <div style={{ perspective: '1500px', overflow: 'hidden', backgroundColor: isLightMode ? '#fcfbf7' : '#0a0a0a' }}>
         <div 
           ref={scope}
-          className={`${isCreativeMode ? creativeTheme : logicTheme} ${container}`}
+          className={`${isLightMode ? lightTheme : darkTheme} ${container}`}
           style={{ transformStyle: 'preserve-3d' }}
         >
           
@@ -62,7 +62,7 @@ function App() {
               <li>
                 {/* Pass our custom handleToggle instead of toggleMode directly */}
                 <Button onClick={handleToggle}>
-                  Toggle Mode ({isCreativeMode ? "Creative" : "Logic"})
+                  Toggle Theme ({isLightMode ? "Light" : "Dark"})
                 </Button>
               </li>
               <li>
