@@ -42,6 +42,7 @@ export const typewriterWrapper = style({
   fontFamily: vars.fonts.code,
   display: 'flex',
   alignItems: 'center',
+  lineHeight: 1.5,
 });
 
 export const staticText = style({
@@ -51,6 +52,8 @@ export const staticText = style({
 export const dynamicText = style({
   color: vars.colors.primary,
   fontWeight: 'bold',
+  // needs to match lineHeight of typewriterWrapper
+  minHeight: '1.5em',
 });
 
 export const cursor = style({
