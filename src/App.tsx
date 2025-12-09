@@ -45,7 +45,6 @@ function App() {
           style={{ transformStyle: "preserve-3d" }}
         >
           <WebGLExperience />
-
           <nav>
             <ul className={nav}>
               <li>
@@ -63,29 +62,7 @@ function App() {
               </li>
             </ul>
           </nav>
-
-          <div className={pageContent}>
-            <AnimatePresence mode="wait">
-              <Routes location={location} key={location.pathname}>
-                <Route
-                  path="/"
-                  element={
-                    <PageTransition>
-                      <Home />
-                    </PageTransition>
-                  }
-                />
-                <Route
-                  path="/about"
-                  element={
-                    <PageTransition>
-                      <About />
-                    </PageTransition>
-                  }
-                />
-              </Routes>
-            </AnimatePresence>
-          </div>
+          <Home />
         </div>
       </div>
     </LenisWrapper>
