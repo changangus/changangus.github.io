@@ -44,8 +44,8 @@ function App() {
           style={{ transformStyle: "preserve-3d" }}
         >
           <WebGLExperience />
-          <nav style={{ position: "sticky", width: "100%", zIndex: 1000 }}>
-            <ul className={nav}>
+          <nav className={nav}>
+            <ul>
               <li>
                 <ThemeToggleButton onClick={handleToggle} />
               </li>

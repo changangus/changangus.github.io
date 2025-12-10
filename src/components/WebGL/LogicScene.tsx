@@ -18,13 +18,13 @@ const LogicScene = () => {
 
     // Camera Zoom Out Logic
     // Move from z=5 (inside) to z=50 (outside)
-    const targetZ = 5 + scrollProgress * 20;
+    const targetZ = 5 + scrollProgress * 35;
     state.camera.position.z = THREE.MathUtils.lerp(state.camera.position.z, targetZ, 0.1);
 
     // Scroll Rotation Logic (Applied to Group)
     if (groupRef.current) {
-      groupRef.current.rotation.y = scrollProgress * Math.PI * 0.2;
-      groupRef.current.rotation.x = scrollProgress * Math.PI * 0.2;
+      groupRef.current.rotation.y = scrollProgress * Math.PI * 0.1;
+      groupRef.current.rotation.x = scrollProgress * Math.PI * 0.1;
     }
 
     if (!meshRef.current) return;

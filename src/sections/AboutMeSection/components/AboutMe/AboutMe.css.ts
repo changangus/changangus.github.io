@@ -18,6 +18,7 @@ export const aboutMeContainer = style({
   alignItems: "flex-start",
   justifyContent: "center",
   width: "100%",
+  minHeight: "60vh",
   textAlign: "left",
   border: `2px solid ${vars.colors.text}`,
   padding: vars.space.large,
