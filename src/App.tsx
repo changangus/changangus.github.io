@@ -1,5 +1,5 @@
 import { useAnimate } from "framer-motion";
-import HeroSection from "./sections/HeroSection";
+import HeroSection from "./sections/HeroSection/HeroSection";
 import { useMode } from "./context/ModeContext";
 import { lightTheme } from "./styles/lightTheme.css";
 import { darkTheme } from "./styles/darkTheme.css";
@@ -8,6 +8,7 @@ import ThemeToggleButton from "./components/ThemeToggleButton/ThemeToggleButton"
 import LenisWrapper from "./components/Lenis/LenisWrapper";
 import SEO from "./components/SEO/SEO";
 import WebGLExperience from "./components/WebGL/WebGLExperience";
+import AboutMeSection from "./sections/AboutMeSection/AboutMeSection";
 
 function App() {
   const { isLightMode, toggleLightMode, isReducedMotion } = useMode();
@@ -34,14 +35,16 @@ function App() {
       <SEO title="Angus Chang" description="A software engineering portfolio showcasing interactive web experiences." />
 
       {/* Perspective Wrapper for 3D effect */}
-      <div style={{ perspective: "1500px", overflow: "hidden", backgroundColor: isLightMode ? "#fcfbf7" : "#0a0a0a" }}>
+      <div
+        style={{ position: "relative", perspective: "1500px", backgroundColor: isLightMode ? "#fcfbf7" : "#0a0a0a" }}
+      >
         <div
           ref={scope}
           className={`${isLightMode ? lightTheme : darkTheme} ${container}`}
           style={{ transformStyle: "preserve-3d" }}
         >
           <WebGLExperience />
-          <nav>
+          <nav style={{ position: "sticky", width: "100%", zIndex: 1000 }}>
             <ul className={nav}>
               <li>
                 <ThemeToggleButton onClick={handleToggle} />
@@ -49,6 +52,7 @@ function App() {
             </ul>
           </nav>
           <HeroSection />
+          <AboutMeSection />
         </div>
       </div>
     </LenisWrapper>

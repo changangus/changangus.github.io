@@ -14,6 +14,7 @@ export const themeToggleButton = style({
   outline: 'none',
   transition: 'background-color 0.3s ease, border-color 0.3s ease',
   position: 'relative',
+  padding: 24,
   overflow: 'hidden',
   selectors: {
     '&:hover': {
