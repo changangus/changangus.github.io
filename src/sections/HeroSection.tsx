@@ -1,7 +1,7 @@
 import SEO from "../components/SEO/SEO";
-import Hero from "../components/Hero/Hero";
+import Hero from "./HeroSection/components/Hero/Hero";
 
-const Home: React.FC = () => {
+const HeroSection: React.FC = () => {
   return (
     <>
       <SEO title="Home | Angus Chang" description="Welcome to Angus Chang's portfolio." />
@@ -10,4 +10,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default HeroSection;

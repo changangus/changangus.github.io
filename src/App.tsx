@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
 import { useAnimate } from "framer-motion";
-import Home from "./pages/Home";
+import HeroSection from "./sections/HeroSection";
 import { useMode } from "./context/ModeContext";
 import { lightTheme } from "./styles/lightTheme.css";
 import { darkTheme } from "./styles/darkTheme.css";
-import { container, nav, navLink } from "./styles/app.css";
+import { container, nav } from "./styles/app.css";
 import ThemeToggleButton from "./components/ThemeToggleButton/ThemeToggleButton";
 import LenisWrapper from "./components/Lenis/LenisWrapper";
 import SEO from "./components/SEO/SEO";
@@ -45,21 +44,11 @@ function App() {
           <nav>
             <ul className={nav}>
               <li>
-                <Link to="/" className={navLink}>
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className={navLink}>
-                  About
-                </Link>
-              </li>
-              <li>
                 <ThemeToggleButton onClick={handleToggle} />
               </li>
             </ul>
           </nav>
-          <Home />
+          <HeroSection />
         </div>
       </div>
     </LenisWrapper>

@@ -1,5 +1,5 @@
 import React from "react";
-import { useTypewriter } from "../../hooks/useTypewriter";
+import { useTypewriter } from "../../../../hooks/useTypewriter";
 import { heroContainer, name, typewriterWrapper, staticText, dynamicText, cursor, sectionContainer } from "./Hero.css";
 
 const Hero: React.FC = () => {

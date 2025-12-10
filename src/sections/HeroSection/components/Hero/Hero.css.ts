@@ -1,6 +1,6 @@
 import { style, keyframes } from "@vanilla-extract/css";
-import { vars } from "../../styles/theme.css";
-import { themeTransition } from "../../styles/app.css";
+import { vars } from "../../../../styles/theme.css";
+import { themeTransition } from "../../../../styles/app.css";
 
 const blink = keyframes({
   "0%": { opacity: 1 },
