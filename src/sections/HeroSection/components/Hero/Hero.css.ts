@@ -30,6 +30,8 @@ export const sectionContainer = style({
   maxWidth: "800px",
   width: "100%",
   transition: themeTransition,
+  margin: "0 15px",
+  marginBottom: 125,
 });
 
 export const name = style({
@@ -49,7 +51,7 @@ export const title = style({
 });
 
 export const typewriterWrapper = style({
-  fontSize: "clamp(1rem, 2.5vw, 1.5rem)",
+  fontSize: "clamp(1.2rem, 2.5vw, 1.5rem)",
   fontFamily: vars.fonts.code,
   display: "flex",
   alignItems: "center",

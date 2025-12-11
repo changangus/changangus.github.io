@@ -3,19 +3,22 @@ import { vars } from "../../../../styles/theme.css";
 import { themeTransition } from "../../../../styles/app.css";
 
 export const sectionContainer = style({
-  backgroundColor: vars.colors.surface,
-  padding: vars.space.large,
+  padding: vars.space.small,
   borderRadius: "8px",
-  maxWidth: "800px",
   width: "100%",
+  height: "100%",
   transition: themeTransition,
-  marginTop: vars.space.xlarge,
+  margin: "0 15px",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  justifyContent: "center",
 });
 
 export const aboutMeContainer = style({
   display: "flex",
   flexDirection: "column",
-  alignItems: "flex-start",
+  alignItems: "center",
   justifyContent: "center",
   width: "100%",
   minHeight: "60vh",
@@ -37,7 +40,7 @@ export const title = style({
 });
 
 export const content = style({
-  fontSize: "clamp(1rem, 2vw, 1.25rem)",
+  fontSize: "clamp(1.2rem, 2vw, 1.5rem)",
   fontFamily: vars.fonts.body,
   lineHeight: 1.6,
   color: vars.colors.text,

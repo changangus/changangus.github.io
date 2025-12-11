@@ -1,12 +1,12 @@
 import React from "react";
 import AboutMe from "./components/AboutMe/AboutMe";
-import { sectionWrapper } from "../../styles/app.css";
+import Section from "../../components/Section/Section";
 
 const AboutMeSection: React.FC = () => {
   return (
-    <section className={sectionWrapper}>
+    <Section>
        <AboutMe />
-    </section>
+    </Section>
   );
 };
 

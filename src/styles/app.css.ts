@@ -37,16 +37,6 @@ globalStyle(`${nav} li`, {
   listStyle: "none",
 });
 
-export const sectionWrapper = style({
-  height: "100vh",
-  width: "100%",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  scrollSnapAlign: "start",
-  paddingTop: "60px", // Account for fixed nav if content gets too high, though centering usually handles it
-});
-
 export const navLink = style({
   textDecoration: "none",
   color: vars.colors.primary, // Use theme primary color

@@ -1,13 +1,13 @@
 import SEO from "../../components/SEO/SEO";
 import Hero from "./components/Hero/Hero";
-import { sectionWrapper } from "../../styles/app.css";
+import Section from "../../components/Section/Section";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className={sectionWrapper}>
+    <Section>
       <SEO title="Home | Angus Chang" description="Welcome to Angus Chang's portfolio." />
       <Hero />
-    </section>
+    </Section>
   );
 };
 
