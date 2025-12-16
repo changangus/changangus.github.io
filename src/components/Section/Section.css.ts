@@ -1,10 +1,10 @@
 import { style } from "@vanilla-extract/css";
 
 export const section = style({
-  height: "100vh",
+  minHeight: "100vh",
   width: "100%",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  scrollSnapAlign: "start",
+  padding: "2rem 0", // Add vertical padding to prevent edge touching
 });

@@ -9,6 +9,7 @@ import LenisWrapper from "./components/Lenis/LenisWrapper";
 import SEO from "./components/SEO/SEO";
 import WebGLExperience from "./components/WebGL/WebGLExperience";
 import AboutMeSection from "./sections/AboutMeSection/AboutMeSection";
+import ResumeSection from "./sections/ResumeSection/ResumeSection";
 
 function App() {
   const { isLightMode, toggleLightMode, isReducedMotion } = useMode();
@@ -53,6 +54,7 @@ function App() {
           </nav>
           <HeroSection />
           <AboutMeSection />
+          <ResumeSection />
         </div>
       </div>
     </LenisWrapper>

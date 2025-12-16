@@ -26,11 +26,10 @@ export const heroContainer = style({
 export const sectionContainer = style({
   backgroundColor: vars.colors.surface,
   padding: vars.space.large,
-  borderRadius: "8px",
-  maxWidth: "800px",
+  maxWidth: "1000px",
   width: "100%",
   transition: themeTransition,
-  margin: "0 15px",
+  margin: "0 10px",
   marginBottom: 125,
 });
 

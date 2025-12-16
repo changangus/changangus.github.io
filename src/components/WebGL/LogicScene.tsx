@@ -18,7 +18,7 @@ const LogicScene = () => {
 
     // Camera Zoom Out Logic
     // Move from z=5 (inside) to z=50 (outside)
-    const targetZ = 5 + scrollProgress * 35;
+    const targetZ = 5 + scrollProgress * 70;
     state.camera.position.z = THREE.MathUtils.lerp(state.camera.position.z, targetZ, 0.1);
 
     // Scroll Rotation Logic (Applied to Group)
@@ -49,7 +49,7 @@ const LogicScene = () => {
           color={color}
           wireframe={true}
           transparent
-          opacity={0.15} // Subtle visibility
+          opacity={0.35} // Subtle visibility
         />
       </mesh>
     </group>

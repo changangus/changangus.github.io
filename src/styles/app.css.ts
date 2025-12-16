@@ -16,7 +16,7 @@ export const container = style({
   alignItems: "center",
   // Removed justifyContent: 'center' as it interferes with snapping
   transition: themeTransition,
-  scrollSnapType: "y mandatory", // Enable scroll snapping
+
 });
 
 export const nav = style({

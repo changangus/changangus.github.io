@@ -1,17 +1,30 @@
 import React from "react";
-import { sectionContainer, aboutMeContainer, title, content } from "./AboutMe.css";
+import {
+  sectionContainer,
+  aboutMeContainer,
+  header,
+  title,
+  subtitle,
+  content,
+} from "./AboutMe.css";
 
 const AboutMe: React.FC = () => {
   return (
     <div className={sectionContainer}>
-      <h2 className={title}>About Me</h2>
       <div className={aboutMeContainer}>
+        <div className={header}>
+          <h2 className={title}>About Me</h2>
+          <span className={subtitle}>Background & Philosophy</span>
+        </div>
         <p className={content}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.
+          I am a passionate software engineer with a deep love for creative coding and interactive design. 
+          My journey started with a curiosity for how things work on the web, leading me to specialize in 
+          building immersive digital experiences.
+          <br />
+          <br />
+          When I'm not coding, you can find me exploring the city through my camera lens, printing custom 
+          designs, or on the basketball court. I believe in the intersection of technology and art, 
+          striving to create software that is not only functional but also beautiful and engaging.
         </p>
       </div>
     </div>
