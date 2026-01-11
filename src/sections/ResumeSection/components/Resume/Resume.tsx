@@ -10,7 +10,6 @@ import {
   entryHeader,
   entryTitle,
   entryDate,
-  entryDescription,
   bulletList,
   bulletItem,
   skillsList,
@@ -40,10 +39,12 @@ const Resume: React.FC = () => {
           </div>
           <ul className={bulletList}>
             <li className={bulletItem}>
-              Eliminated $28k in monthly fraud losses by architecting segment-based coupon eligibility system with Laravel backend and Shopify integration
+              Eliminated $28k in monthly fraud losses by architecting segment-based coupon eligibility system with
+              Laravel backend and Shopify integration
             </li>
             <li className={bulletItem}>
-              Led migration of 20+ high-traffic authenticated pages (500K+ monthly users) from Gatsby monolith to Nx/Remix monorepo
+              Led migration of 20+ high-traffic authenticated pages (500K+ monthly users) from Gatsby monolith to
+              Nx/Remix monorepo
             </li>
             <li className={bulletItem}>
               Built custom API interceptor tooling that accelerated development cycles and reduced QA bottlenecks
@@ -52,7 +53,8 @@ const Resume: React.FC = () => {
               Optimized data fetching architecture, reducing payload size by 70% through GraphQL query improvements
             </li>
             <li className={bulletItem}>
-              Built and maintain Freezer design system—a React/TypeScript component library using Vanilla Extract and Storybook
+              Built and maintain Freezer design system—a React/TypeScript component library using Vanilla Extract and
+              Storybook
             </li>
           </ul>
         </div>
@@ -64,16 +66,20 @@ const Resume: React.FC = () => {
           </div>
           <ul className={bulletList}>
             <li className={bulletItem}>
-              Developed and maintained React/TypeScript e-commerce product pages for Gap Inc., serving millions of users across 4 international brands
+              Developed and maintained React/TypeScript e-commerce product pages for Gap Inc., serving millions of users
+              across 4 international brands
             </li>
             <li className={bulletItem}>
-              Created developer tooling including custom ESLint rules for CSS-in-JS validation and URL generators, reducing PR review cycles
+              Created developer tooling including custom ESLint rules for CSS-in-JS validation and URL generators,
+              reducing PR review cycles
             </li>
             <li className={bulletItem}>
-              Built WCAG 2.1 AA compliant marketing pages that increased Sparkbox Apprenticeship applications by 50% year-over-year
+              Built WCAG 2.1 AA compliant marketing pages that increased Sparkbox Apprenticeship applications by 50%
+              year-over-year
             </li>
             <li className={bulletItem}>
-              Mentored 3 apprentice developers through code reviews and facilitated bi-weekly engineering knowledge-sharing sessions
+              Mentored 3 apprentice developers through code reviews and facilitated bi-weekly engineering
+              knowledge-sharing sessions
             </li>
           </ul>
         </div>
