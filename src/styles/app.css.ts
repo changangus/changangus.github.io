@@ -25,7 +25,7 @@ export const nav = style({
   left: 0,
   width: "100%",
   zIndex: 100, // Ensure nav is above other content
-  padding: vars.space.small, // Add padding
+  padding: vars.space.medium, // Add padding
   display: "flex",
   justifyContent: "flex-end", // Move items to the right
   gap: vars.space.small, // Use theme space medium

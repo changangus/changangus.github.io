@@ -35,12 +35,13 @@ export const sectionContainer = style({
   width: "100%",
   transition: themeTransition,
   margin: "0 10px",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
   "@media": {
     "(max-width: 768px)": {
       height: "calc(100dvh - 150px)",
       marginBottom: 0,
-      display: "flex",
-      flexDirection: "column",
     },
   },
 });
