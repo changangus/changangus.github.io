@@ -21,6 +21,11 @@ export const heroContainer = style({
   backgroundColor: vars.colors.surface,
   boxShadow: "20px 20px 0px 0px rgba(0,0,0,0.2)",
   transition: themeTransition,
+  "@media": {
+    "(max-width: 768px)": {
+      flex: 1,
+    },
+  },
 });
 
 export const sectionContainer = style({
@@ -30,7 +35,14 @@ export const sectionContainer = style({
   width: "100%",
   transition: themeTransition,
   margin: "0 10px",
-  marginBottom: 125,
+  "@media": {
+    "(max-width: 768px)": {
+      height: "calc(100dvh - 150px)",
+      marginBottom: 0,
+      display: "flex",
+      flexDirection: "column",
+    },
+  },
 });
 
 export const name = style({

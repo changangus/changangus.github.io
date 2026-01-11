@@ -36,9 +36,9 @@ export const header = style({
   marginBottom: vars.space.large,
   display: "flex",
   justifyContent: "space-between",
-  alignItems: "baseline",
+  alignItems: "center",
   flexWrap: "wrap",
-  gap: vars.space.small,
+  gap: vars.space.medium,
 });
 
 export const title = style({
@@ -54,6 +54,28 @@ export const subtitle = style({
   fontSize: "clamp(1rem, 2vw, 1.5rem)",
   fontFamily: vars.fonts.code,
   color: vars.colors.secondary,
+});
+
+export const downloadButton = style({
+  fontFamily: vars.fonts.code,
+  fontSize: "0.9rem",
+  padding: `${vars.space.small} ${vars.space.medium}`,
+  border: `2px solid ${vars.colors.text}`,
+  backgroundColor: vars.colors.primary,
+  color: vars.colors.background,
+  textDecoration: "none",
+  fontWeight: "bold",
+  cursor: "pointer",
+  transition: themeTransition,
+  whiteSpace: "nowrap",
+  ":hover": {
+    transform: "translate(-2px, -2px)",
+    boxShadow: "4px 4px 0px 0px rgba(0,0,0,0.3)",
+  },
+  ":active": {
+    transform: "translate(0, 0)",
+    boxShadow: "2px 2px 0px 0px rgba(0,0,0,0.3)",
+  },
 });
 
 export const sectionTitle = style({
@@ -100,6 +122,22 @@ export const entryDescription = style({
   fontFamily: vars.fonts.body,
   lineHeight: 1.6,
   color: vars.colors.text,
+});
+
+export const bulletList = style({
+  listStyle: "disc",
+  paddingLeft: "1.5rem",
+  margin: 0,
+});
+
+export const bulletItem = style({
+  fontFamily: vars.fonts.body,
+  lineHeight: 1.6,
+  color: vars.colors.text,
+  marginBottom: vars.space.small,
+  "::marker": {
+    color: vars.colors.primary,
+  },
 });
 
 export const skillsList = style({

@@ -3,7 +3,7 @@ import HeroSection from "./sections/HeroSection/HeroSection";
 import { useMode } from "./context/ModeContext";
 import { lightTheme } from "./styles/lightTheme.css";
 import { darkTheme } from "./styles/darkTheme.css";
-import { container, nav } from "./styles/app.css";
+import { container, nav, navLink } from "./styles/app.css";
 import ThemeToggleButton from "./components/ThemeToggleButton/ThemeToggleButton";
 import LenisWrapper from "./components/Lenis/LenisWrapper";
 import SEO from "./components/SEO/SEO";
@@ -47,6 +47,16 @@ function App() {
           <WebGLExperience />
           <nav className={nav}>
             <ul>
+              <li>
+                <a href="https://github.com/achang24678" target="_blank" rel="noopener noreferrer" className={navLink}>
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/angus-chang/" target="_blank" rel="noopener noreferrer" className={navLink}>
+                  LinkedIn
+                </a>
+              </li>
               <li>
                 <ThemeToggleButton onClick={handleToggle} />
               </li>

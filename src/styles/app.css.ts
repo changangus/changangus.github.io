@@ -25,12 +25,22 @@ export const nav = style({
   left: 0,
   width: "100%",
   zIndex: 100, // Ensure nav is above other content
-  padding: vars.space.medium, // Add padding
+  padding: vars.space.small, // Add padding
   display: "flex",
   justifyContent: "flex-end", // Move items to the right
-  gap: vars.space.medium, // Use theme space medium
-  marginBottom: vars.space.large,
+  gap: vars.space.small, // Use theme space medium
+  marginBottom: vars.space.small,
   listStyle: "none",
+});
+
+globalStyle(`${nav} ul`, {
+  display: "flex",
+  flexDirection: "row",
+  gap: vars.space.medium,
+  listStyle: "none",
+  margin: 0,
+  padding: 0,
+  alignItems: "center",
 });
 
 globalStyle(`${nav} li`, {
@@ -39,6 +49,7 @@ globalStyle(`${nav} li`, {
 
 export const navLink = style({
   textDecoration: "none",
+  fontWeight: "bold",
   color: vars.colors.primary, // Use theme primary color
   fontSize: "1.2em",
   transition: themeTransition,

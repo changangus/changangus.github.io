@@ -14,17 +14,16 @@ const AboutMe: React.FC = () => {
       <div className={aboutMeContainer}>
         <div className={header}>
           <h2 className={title}>About Me</h2>
-          <span className={subtitle}>Background & Philosophy</span>
+          <span className={subtitle}>Engineer & Maker</span>
         </div>
         <p className={content}>
-          I am a passionate software engineer with a deep love for creative coding and interactive design. 
-          My journey started with a curiosity for how things work on the web, leading me to specialize in 
-          building immersive digital experiences.
+          I'm a self-taught full stack engineer who's been building web apps for over 5 years. I got into coding because I was curious about how the web worked and saw the potential of being able to build out my ideas with software.That curiosity turned into a career working at startups and agencies, where I've had the chance to work on a variety of projects and technologies across the entire stack.
           <br />
           <br />
-          When I'm not coding, you can find me exploring the city through my camera lens, printing custom 
-          designs, or on the basketball court. I believe in the intersection of technology and art, 
-          striving to create software that is not only functional but also beautiful and engaging.
+          I build accessible, performant UIs on the frontend and solid APIs on the backend. I care a lot about making things that work well, look beautiful and are easy to use. Whether that's for end users or other developers on my team.
+          <br />
+          <br />
+          Outside of code, I'm into printmaking (screen printing and letterpress), photography, and basketball. I like working with my hands and creating things, whether it's on a screen or with ink and paper.
         </p>
       </div>
     </div>

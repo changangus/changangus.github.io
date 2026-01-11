@@ -3,6 +3,7 @@ import {
   header,
   title,
   subtitle,
+  downloadButton,
   sectionTitle,
   contentGroup,
   entry,
@@ -10,6 +11,8 @@ import {
   entryTitle,
   entryDate,
   entryDescription,
+  bulletList,
+  bulletItem,
   skillsList,
   skillTag,
 } from "./Resume.css";
@@ -18,8 +21,13 @@ const Resume: React.FC = () => {
   return (
     <div>
       <div className={header}>
-        <h2 className={title}>Resume</h2>
-        <span className={subtitle}>Angus Chang • Creative Developer</span>
+        <div>
+          <h2 className={title}>Resume</h2>
+          <span className={subtitle}>Full Stack Developer</span>
+        </div>
+        <a href="/Angus-Chang-Resume.pdf" download className={downloadButton}>
+          Download Resume
+        </a>
       </div>
 
       <div className={contentGroup}>
@@ -27,37 +35,47 @@ const Resume: React.FC = () => {
 
         <div className={entry}>
           <div className={entryHeader}>
-            <span className={entryTitle}>Senior Frontend Engineer @ Tech Corp</span>
-            <span className={entryDate}>2023 - Present</span>
+            <span className={entryTitle}>Software Engineer @ ButcherBox</span>
+            <span className={entryDate}>Dec 2022 - Present</span>
           </div>
-          <p className={entryDescription}>
-            Leading the frontend development of next-generation web applications using React, TypeScript, and WebGL.
-            Focused on performance optimization and creating immersive user experiences.
-          </p>
+          <ul className={bulletList}>
+            <li className={bulletItem}>
+              Eliminated $28k in monthly fraud losses by architecting segment-based coupon eligibility system with Laravel backend and Shopify integration
+            </li>
+            <li className={bulletItem}>
+              Led migration of 20+ high-traffic authenticated pages (500K+ monthly users) from Gatsby monolith to Nx/Remix monorepo
+            </li>
+            <li className={bulletItem}>
+              Built custom API interceptor tooling that accelerated development cycles and reduced QA bottlenecks
+            </li>
+            <li className={bulletItem}>
+              Optimized data fetching architecture, reducing payload size by 70% through GraphQL query improvements
+            </li>
+            <li className={bulletItem}>
+              Built and maintain Freezer design system—a React/TypeScript component library using Vanilla Extract and Storybook
+            </li>
+          </ul>
         </div>
 
         <div className={entry}>
           <div className={entryHeader}>
-            <span className={entryTitle}>Creative Developer @ Digital Agency</span>
-            <span className={entryDate}>2021 - 2023</span>
+            <span className={entryTitle}>Software Developer @ Sparkbox</span>
+            <span className={entryDate}>June 2021 - Dec 2022</span>
           </div>
-          <p className={entryDescription}>
-            Collaborated with designers to bring creative visions to life. Built interactive microsites and marketing
-            campaigns using Three.js and various animation libraries.
-          </p>
-        </div>
-      </div>
-
-      <div className={contentGroup}>
-        <h3 className={sectionTitle}>Education</h3>
-        <div className={entry}>
-          <div className={entryHeader}>
-            <span className={entryTitle}>B.S. Computer Science</span>
-            <span className={entryDate}>2017 - 2021</span>
-          </div>
-          <p className={entryDescription}>
-            University of Technology. Specialized in Human-Computer Interaction and Computer Graphics.
-          </p>
+          <ul className={bulletList}>
+            <li className={bulletItem}>
+              Developed and maintained React/TypeScript e-commerce product pages for Gap Inc., serving millions of users across 4 international brands
+            </li>
+            <li className={bulletItem}>
+              Created developer tooling including custom ESLint rules for CSS-in-JS validation and URL generators, reducing PR review cycles
+            </li>
+            <li className={bulletItem}>
+              Built WCAG 2.1 AA compliant marketing pages that increased Sparkbox Apprenticeship applications by 50% year-over-year
+            </li>
+            <li className={bulletItem}>
+              Mentored 3 apprentice developers through code reviews and facilitated bi-weekly engineering knowledge-sharing sessions
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -66,11 +84,14 @@ const Resume: React.FC = () => {
         <div className={skillsList}>
           <span className={skillTag}>React</span>
           <span className={skillTag}>TypeScript</span>
-          <span className={skillTag}>WebGL / Three.js</span>
           <span className={skillTag}>Node.js</span>
-          <span className={skillTag}>Vanilla Extract</span>
-          <span className={skillTag}>UI/UX Design</span>
-          <span className={skillTag}>Photography</span>
+          <span className={skillTag}>Next.js</span>
+          <span className={skillTag}>Remix</span>
+          <span className={skillTag}>GraphQL</span>
+          <span className={skillTag}>PostgreSQL</span>
+          <span className={skillTag}>Laravel</span>
+          <span className={skillTag}>AWS</span>
+          <span className={skillTag}>WCAG 2.1 AA</span>
         </div>
       </div>
     </div>
