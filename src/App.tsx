@@ -48,12 +48,12 @@ function App() {
           <nav className={nav}>
             <ul>
               <li>
-                <a href="https://github.com/achang24678" target="_blank" rel="noopener noreferrer" className={navLink}>
+                <a href="https://github.com/changangus" target="_blank" rel="noopener noreferrer" className={navLink}>
                   GitHub
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/angus-chang/" target="_blank" rel="noopener noreferrer" className={navLink}>
+                <a href="https://www.linkedin.com/in/changangus/" target="_blank" rel="noopener noreferrer" className={navLink}>
                   LinkedIn
                 </a>
               </li>
