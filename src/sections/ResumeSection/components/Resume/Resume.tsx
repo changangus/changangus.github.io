@@ -39,7 +39,7 @@ const Resume: React.FC = () => {
           </div>
           <ul className={bulletList}>
             <li className={bulletItem}>
-              Eliminated $28k in monthly fraud losses by architecting segment-based coupon eligibility system with
+              Eliminated $28k in monthly fraud losses by architecting segment-based coupon eligibility system within our
               Laravel backend and Shopify integration
             </li>
             <li className={bulletItem}>
@@ -53,8 +53,8 @@ const Resume: React.FC = () => {
               Optimized data fetching architecture, reducing payload size by 70% through GraphQL query improvements
             </li>
             <li className={bulletItem}>
-              Built and maintain Freezer design system—a React/TypeScript component library using Vanilla Extract and
-              Storybook
+              Built and maintained parts of our site wide design system—a React/TypeScript component library using
+              Vanilla Extract and Storybook
             </li>
           </ul>
         </div>
